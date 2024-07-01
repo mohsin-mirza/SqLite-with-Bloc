@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sqlite_with_bloc/presentation/bloc/app_cubit/app_cubit.dart';
-import 'package:sqlite_with_bloc/presentation/pages/app_screen.dart';
+import 'package:sqlite_with_bloc/presentation/pages/base_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const AppScreen(),
+        home: const BaseScreen(),
       ),
     );
   }
