@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sqlite_with_bloc/presentation/bloc/app_cubit/app_cubit.dart';
-import 'package:sqlite_with_bloc/presentation/pages/base_screen.dart';
+import 'package:sqlite_with_bloc/presentation/cubit/app_cubit.dart';
+import 'package:sqlite_with_bloc/presentation/pages/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => AppCubit(),
-        )
+        BlocProvider(create: (create) => AppCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const BaseScreen(),
+        home: const HomePage(),
       ),
     );
   }
